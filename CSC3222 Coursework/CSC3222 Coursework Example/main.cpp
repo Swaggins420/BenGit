@@ -36,7 +36,7 @@ int main() {
 	w.LockMouseToWindow(true);
 	w.ShowOSPointer(false);		
 
-	cout << "ben is proving his point";
+	
 	while (w.UpdateWindow() && !Window::GetKeyboard()->KeyDown(KEYBOARD_ESCAPE)) {
 		float msec = w.GetTimer()->GetTimedMS();
 		physics.UpdatePhysics(msec);
