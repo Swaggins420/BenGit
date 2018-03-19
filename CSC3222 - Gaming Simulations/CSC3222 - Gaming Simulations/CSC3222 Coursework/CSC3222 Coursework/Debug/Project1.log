@@ -1,0 +1,79 @@
+﻿  Raider.cpp
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\dragon.h(4): error C2504: 'Entity': base class undefined
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(38): error C3646: 'map': unknown override specifier
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(38): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(40): error C3646: 'breath': unknown override specifier
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(40): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(41): error C2065: 'Raider': undeclared identifier
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(41): error C2923: 'std::vector': 'Raider' is not a valid template type argument for parameter '_Ty'
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(41): error C3203: 'allocator': unspecialized class template can't be used as a template argument for template parameter '_Alloc', expected a real type
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\raider.cpp(14): warning C4018: '<': signed/unsigned mismatch
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\raider.cpp(23): error C2039: 'getPhysicsNode': is not a member of 'Dragon'
+  h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\dragon.h(4): note: see declaration of 'Dragon'
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\raider.cpp(23): error C2228: left of '.getPosition' must have class/struct/union
+  PhysicsNode.cpp
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\entity.h(25): error C3646: 'getPhysicsNode': unknown override specifier
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\entity.h(25): error C2059: syntax error: '('
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\entity.h(25): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\entity.h(32): error C3646: 'physicsNode': unknown override specifier
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\entity.h(32): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\entity.h(15): error C2065: 'physicsNode': undeclared identifier
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\entity.h(15): error C2228: left of '.setPosition' must have class/struct/union
+  h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\entity.h(15): note: type is 'unknown-type'
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\entity.h(16): error C2065: 'physicsNode': undeclared identifier
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\entity.h(16): error C2228: left of '.getPosition' must have class/struct/union
+  h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\entity.h(16): note: type is 'unknown-type'
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\entity.h(16): error C2228: left of '.z' must have class/struct/union
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\entity.h(16): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'Vector3'
+  h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\entity.h(16): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\entity.h(21): error C2065: 'physicsNode': undeclared identifier
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\entity.h(21): error C2228: left of '.setPosition' must have class/struct/union
+  h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\entity.h(21): note: type is 'unknown-type'
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\raider.h(11): error C2061: syntax error: identifier 'vector'
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(38): error C3646: 'map': unknown override specifier
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(38): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(40): error C3646: 'breath': unknown override specifier
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(40): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  Physics.cpp
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\raider.h(11): error C2061: syntax error: identifier 'vector'
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.cpp(11): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.cpp(59): error C2660: 'Raider::countRaidersInRange': function does not take 2 arguments
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.cpp(83): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.cpp(101): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.cpp(152): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+  Leader.cpp
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\dragon.h(4): error C2504: 'Entity': base class undefined
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(38): error C3646: 'map': unknown override specifier
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(38): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(40): error C3646: 'breath': unknown override specifier
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(40): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(41): error C2065: 'Raider': undeclared identifier
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(41): error C2923: 'std::vector': 'Raider' is not a valid template type argument for parameter '_Ty'
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(41): error C3203: 'allocator': unspecialized class template can't be used as a template argument for template parameter '_Alloc', expected a real type
+  Follower.cpp
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\dragon.h(4): error C2504: 'Entity': base class undefined
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(38): error C3646: 'map': unknown override specifier
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(38): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(40): error C3646: 'breath': unknown override specifier
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(40): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(41): error C2065: 'Raider': undeclared identifier
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(41): error C2923: 'std::vector': 'Raider' is not a valid template type argument for parameter '_Ty'
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(41): error C3203: 'allocator': unspecialized class template can't be used as a template argument for template parameter '_Alloc', expected a real type
+  Entity.cpp
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\dragon.h(4): error C2504: 'Entity': base class undefined
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\raider.h(4): error C2504: 'Entity': base class undefined
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\raider.h(11): error C2061: syntax error: identifier 'vector'
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(38): error C3646: 'map': unknown override specifier
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(38): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(40): error C3646: 'breath': unknown override specifier
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(40): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  Dragon.cpp
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\raider.h(4): error C2504: 'Entity': base class undefined
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\raider.h(11): error C2061: syntax error: identifier 'vector'
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(38): error C3646: 'map': unknown override specifier
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(38): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(39): error C3646: 'dragon': unknown override specifier
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(39): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(40): error C3646: 'breath': unknown override specifier
+h:\csc3222 - gaming simulations\csc3222 coursework\csc3222 coursework\csc3222 coursework example\physics.h(40): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  Generating Code...
