@@ -246,10 +246,10 @@ Mesh* Mesh::GenerateQuad()	{
 	m->normals			= new Vector3[m->numVertices];
 	m->tangents			= new Vector3[m->numVertices];
 
-	m->vertices[0] = 	Vector3(-1.0f, -1.0f, 0.0f);
-	m->vertices[1] = 	Vector3(-1.0f,	1.0f, 0.0f);
-	m->vertices[2] = 	Vector3(1.0f, -1.0f, 0.0f);
-	m->vertices[3] = 	Vector3(1.0f,  1.0f, 0.0f);
+	m->vertices[0] = 	Vector3(-1.0f, -1.0f, 0.0f);//bottom left
+	m->vertices[1] = 	Vector3(-1.0f,	1.0f, 0.0f);//bottom right
+	m->vertices[2] = 	Vector3(1.0f, -1.0f, 0.0f);//top left
+	m->vertices[3] = 	Vector3(1.0f,  1.0f, 0.0f);//top right
 
 	m->textureCoords[0] = Vector2(0.0f,	1.0f);
 	m->textureCoords[1] = Vector2(0.0f,	0.0f);
@@ -268,6 +268,41 @@ Mesh* Mesh::GenerateQuad()	{
 
 	return m;
 }
+
+//Mesh* Mesh::GenerateQuad(Vector3& bl, Vector3& br, Vector3& tl, Vector3& tr) {//Added new implementation to allow specifying of vertex coords
+//	Mesh* m = new Mesh();
+//
+//	m->numVertices = 4;
+//	m->type = GL_TRIANGLE_STRIP;
+//
+//	m->vertices = new Vector3[m->numVertices];
+//	m->textureCoords = new Vector2[m->numVertices];
+//	m->colours = new Vector4[m->numVertices];
+//	m->normals = new Vector3[m->numVertices];
+//	m->tangents = new Vector3[m->numVertices];
+//
+//	m->vertices[0] = Vector3(bl.x, bl.y, bl.z);//bottom left
+//	m->vertices[1] = Vector3(br.x, br.y, br.z);//bottom right
+//	m->vertices[2] = Vector3(tl.x, tl.y, tl.z);//top left
+//	m->vertices[3] = Vector3(tr.x, tr.y, tr.z);//top right
+//
+//	m->textureCoords[0] = Vector2(0.0f, 1.0f);
+//	m->textureCoords[1] = Vector2(0.0f, 0.0f);
+//	m->textureCoords[2] = Vector2(1.0f, 1.0f);
+//	m->textureCoords[3] = Vector2(1.0f, 0.0f);
+//
+//	for (int i = 0; i < 4; ++i) {
+//		m->colours[i] = Vector4(1.0f, 0.0f, 0.0f, 0.5f);
+//		m->normals[i] = Vector3(0.0f, 0.0f, -1.0f);
+//		m->tangents[i] = Vector3(1.0f, 0.0f, 0.0f);
+//	}
+//
+//	//m->GenerateNormals();
+//	//m->GenerateTangents();
+//	m->BufferData();
+//
+//	return m;
+//}
 
 
 Mesh* Mesh::GenerateQuadAlt()	{

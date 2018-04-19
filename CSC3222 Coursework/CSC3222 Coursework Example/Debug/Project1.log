@@ -1,1 +1,24 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(317,5): error MSB3491: Could not write lines to file "Debug\CSC3222 .6B977C1C.tlog\CSC3222 Coursework Framework.lastbuildstate". The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters.
+﻿  main.cpp
+  Physics.cpp
+c:\users\rick\documents\docs\work\csc3222 - gaming simulations\bengit\csc3222 coursework\csc3222 coursework example\physics.cpp(154): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\rick\documents\docs\work\csc3222 - gaming simulations\bengit\csc3222 coursework\csc3222 coursework example\physics.cpp(209): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+c:\users\rick\documents\docs\work\csc3222 - gaming simulations\bengit\csc3222 coursework\csc3222 coursework example\physics.cpp(231): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+c:\users\rick\documents\docs\work\csc3222 - gaming simulations\bengit\csc3222 coursework\csc3222 coursework example\physics.cpp(233): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+c:\users\rick\documents\docs\work\csc3222 - gaming simulations\bengit\csc3222 coursework\csc3222 coursework example\physics.cpp(237): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
+  Compiling...
+  Renderer.cpp
+c:\users\rick\documents\docs\work\csc3222 - gaming simulations\bengit\csc3222 coursework\csc3222 coursework example\renderer.cpp(118): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\rick\documents\docs\work\csc3222 - gaming simulations\bengit\csc3222 coursework\csc3222 coursework example\renderer.cpp(133): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\rick\documents\docs\work\csc3222 - gaming simulations\bengit\csc3222 coursework\csc3222 coursework example\renderer.cpp(143): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\rick\documents\docs\work\csc3222 - gaming simulations\bengit\csc3222 coursework\csc3222 coursework example\renderer.cpp(152): warning C4018: '<': signed/unsigned mismatch
+c:\users\rick\documents\docs\work\csc3222 - gaming simulations\bengit\csc3222 coursework\csc3222 coursework example\renderer.cpp(154): warning C4305: 'argument': truncation from 'double' to 'float'
+  Generating Code...
+Renderer.obj : warning LNK4049: locally defined symbol ___glewGetUniformLocation imported
+Renderer.obj : warning LNK4049: locally defined symbol ___glewUniform1i imported
+Renderer.obj : warning LNK4049: locally defined symbol ___glewUniform4fv imported
+Renderer.obj : warning LNK4049: locally defined symbol ___glewUniformMatrix4fv imported
+Renderer.obj : warning LNK4049: locally defined symbol ___glewUseProgram imported
+Renderer.obj : warning LNK4049: locally defined symbol ___glewUniform4uiv imported
+glew32.lib(glew.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'glew32.lib(glew.obj)' or at 'C:\Users\Rick\Documents\Docs\Work\CSC3222 - Gaming Simulations\BenGit\CSC3222 Coursework\Debug\vc120.pdb'; linking object as if no debug info
+  Project1.vcxproj -> C:\Users\Rick\Documents\Docs\Work\CSC3222 - Gaming Simulations\BenGit\CSC3222 Coursework\Debug\CSC3222 Coursework Framework.exe

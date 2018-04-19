@@ -115,6 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="codeDump.cpp" />
     <ClCompile Include="Dragon.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Follower.cpp" />

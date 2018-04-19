@@ -6,27 +6,25 @@ Physics::Physics()
 {
 	numRaiders = 16;
 	//dragon = new Dragon();
-
-		l.physicsNode.setPosition(Vector3(-311 + 27 * 0, -80.0f, -199.9f));
-		l.physicsNode.setOrientation(0*20.0f);
-		l.physicsNode.setScale(Vector3(10.0f, 10.0f, 1.0f));
-
-		raiders.push_back(l);
-
-	for (int i = 1; i < numRaiders; i++)
-	{
-		f.physicsNode.setPosition(Vector3(-311 + 27 * i, -30.0f, -199.9f));
-		f.physicsNode.setOrientation(i*20.0f);
-		f.physicsNode.setScale(Vector3(10.0f, 10.0f, 1.0f));
-
-		raiders.push_back(f);
-	}
-
 	map.setPosition(Vector3(0.0f, 100.0f, -200.0f));
 	map.setOrientation(0.0f);
-	map.setScale(Vector3(864.0f, 540.0f, 100.0f));
+	map.setScale(Vector3(mapX, mapY, mapZ));
 
-	dragon.physicsNode.setPosition(Vector3(-300.0f, 90.0f, -199.5f));
+	coords(grid);
+
+	//leader.physicsNode.setPosition(Vector3(-135, -95, -190.0f));
+	//leader.physicsNode.setPosition(Vector3(-110, -67, -190.0f));
+	leader.physicsNode.setPosition(grid.at(20).at(30));
+	leader.physicsNode.setOrientation(0*20.0f);
+	leader.physicsNode.setScale(Vector3(10.0f, 10.0f, 1.0f));
+
+	raiders.push_back(leader);
+
+
+
+
+
+	dragon.physicsNode.setPosition(Vector3(-300.0f, 90.0f, -180.5f));
 	dragon.physicsNode.setOrientation(0.0f);
 	dragon.physicsNode.setScale(Vector3(50.0f, 50.0f, 1.0f));
 
@@ -45,18 +43,18 @@ Physics::~Physics()
 }
 
 void Physics::UpdatePhysics(float msec)
-{	
+{
 	/*
 	//int count = 0;
 	//for (int i = 0; i < raiders.size(); ++i)
 	//{
 		//float distance = (raiders.at(i).getPosition() - dragon.getPosition()).Length();
 
-	
+
 		shift into raider class passing raiders.at(i) and dragon as params for 2 points
 		then do calculation of raider distance there
-		
-		//Vector3& r = raiders.at(i).getPhysicsNode().getPosition();	
+
+		//Vector3& r = raiders.at(i).getPhysicsNode().getPosition();
 		//Vector3& d = dragon.getPhysicsNode().getPosition();
 		//float distance = sqrt(pow(r.x - d.x, 2) + pow(r.y - d.y, 2));
 		//if ( distance <= 25 ) {
@@ -81,36 +79,46 @@ void Physics::UpdatePhysics(float msec)
 		//	}
 		//}
 		/*// add set raider orientation here - find angle between 2 points and call set orientation with it
-		
+
 		It's just float angle = atan2(p1.y - p2.y, p1.x - p2.x).
 
 		Of course the return type is in radians, if you need it in degrees just do angle * 180 / PI
 		*/
+	if (Window::GetKeyboard()->KeyDown(KEYBOARD_K) && raiderCount < numRaiders) {
+
+		follower.physicsNode.setPosition(grid.at(20 + raiderCount).at(28));
+		follower.physicsNode.setOrientation(raiderCount*20.0f);
+		follower.physicsNode.setScale(Vector3(10.0f, 10.0f, 1.0f));
+
+		raiders.push_back(follower);
+		raiderCount++;
+	}
+
 	Raider r;
 	noInRange = r.countRaidersInRange(raiders, dragon);
 
-	//r.orientRaiders(raiders, dragon, numRaiders );
 
 
 	//make leader face dragon
 	float angle = atan2(raiders.at(0).physicsNode.getPosition().y - dragon.physicsNode.getPosition().y, raiders.at(0).physicsNode.getPosition().x - dragon.physicsNode.getPosition().x);
-	raiders.at(0).physicsNode.setOrientation(angle * 180 / M_PI);
+	//raiders.at(0).physicsNode.setOrientation(angle * 180 / M_PI);
 
-
+	if (raiders.size() == numRaiders) {
 	for (int i = 1; i < numRaiders; i++)
 	{
 		//make followers face leader
 		angle = atan2(raiders.at(i).physicsNode.getPosition().y - raiders.at(0).physicsNode.getPosition().y, raiders.at(i).physicsNode.getPosition().x - raiders.at(0).physicsNode.getPosition().x);
-		raiders.at(i).physicsNode.setOrientation(angle * 180 / M_PI);
+		//raiders.at(i).physicsNode.setOrientation(angle * 180 / M_PI);
 
 
 		if (dragon.inRange(raiders.at(i)) == true) {	//if follower in range of dragon
 			r.raidersInRange.push_back(raiders.at(i));	//add follower to list of followers in range of dragon
 														//make followers in aggro range face dragon
 			angle = atan2(raiders.at(i).physicsNode.getPosition().y - dragon.physicsNode.getPosition().y, raiders.at(i).physicsNode.getPosition().x - dragon.physicsNode.getPosition().x);
-			raiders.at(i).physicsNode.setOrientation(angle * 180 / M_PI);
+			//raiders.at(i).physicsNode.setOrientation(angle * 180 / M_PI);
 		}
 
+	}
 	}
 	//}
 	//noInRange = count;
@@ -206,3 +214,70 @@ void Physics::UpdatePhysics(float msec)
 	}
 
 }
+
+void Physics::coords(vector<vector<BoundingBox> >& box)
+{
+	float h = -mapY;
+	float w = -mapX;
+	float z = -190.9f;
+
+	for (int i = 0; i <= maxX; i++) {//outer loop - x
+		h = -mapX;
+		BoundingBox b = BoundingBox();
+		vector<BoundingBox> v;
+		box.push_back(v);
+		for (int j = 0; j <= maxY; j++) {// inner loop - y
+			b.bottomLeft = Vector3(w, h, z);
+			b.bottomRight = Vector3(w + 26.75, h, z);
+			b.topLeft = Vector3(w, h + 28, z);
+			b.topRight = Vector3(w + 26.75, h + 28, z);
+			box.at(i).push_back(b);
+			h = h + 28;
+		}
+		w = w + 26.75;
+	}
+
+//void display(const vector<vector<int> >& vy)
+//{
+//	for (int i = 0; i < vy.size(); i++)       // loops through each row of vy
+//	{
+//		for (int j = 0; j < vy[i].size(); j++) // loops through each element of each row 
+//			cout << " " << vy[i][j];           // prints the jth element of the ith row
+//		cout << endl;
+//	}
+//}
+}
+
+
+
+
+
+
+void Physics::explicitEueler()
+{//velocity in next frame = current v + acceleration x timeDiff
+//displacement in next frame = displacement + velocity x timeDiff
+	
+}
+
+void Physics::implicitEueler()
+{//velocity in next frame = current v + acceleration of next frame x timeDiff
+//displacement in next frame = displacement + velocity of next frame x timeDiff
+
+}
+
+void Physics::semiImplicitEueler()
+{//velocity in next frame = current v + acceleration x timeDiff
+//displacement in next frame = displacement + velocity of next frame x timeDiff
+
+}
+
+void Physics::verletIntegration()
+{//displacement in next frame = displacement + (velocity + acceleration x timeDiff) x timediff
+ //displacement in next frame = displacement + (velocity x timeDiff) + acceleration x timediff^2
+//velocity = (displacement - displacement in next frame) / timeDiff
+//displacement in next frame = displacement + (displacement - displacement of last frame) + acceleration x timeDiff^2
+
+}
+
+
+

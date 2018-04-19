@@ -47,6 +47,26 @@ Renderer::Renderer(Window &parent, Physics* physics) : OGLRenderer(parent) {
 	}
 
 
+	//for (int i = 0; i <= physics->maxX; i++) {//outer loop - x
+	//	
+
+	//	for (int j = 0; j <= physics->maxY; j++) {//outer loop - x
+	//		gridSq = Mesh::GenerateQuad(physics->grid.at(i).at(j).bottomLeft,
+	//									physics->grid.at(i).at(j).bottomRight,
+	//									physics->grid.at(i).at(j).topLeft,
+	//									physics->grid.at(i).at(j).topRight
+	//		);
+	//		SceneNode * s = new SceneNode();
+	//		s->SetColour(Vector4(1.0, 0.0, 0.0, 0.5));
+	//		s->SetTransform(Matrix4::Translation(p->grid.at(i).at(j).topRight));
+	//		s->SetMesh(gridSq);
+	//		s->SetBoundingRadius(5.0f);
+	//		root->AddChild(s);
+
+	//	}
+
+	//}
+
 	// Raider graphics - feel free to extend and edit
 
 	//raider = Mesh::GenerateQuad();
