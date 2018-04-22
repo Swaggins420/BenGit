@@ -2,12 +2,15 @@
 
 
 #include "../../nclgl/Vector3.h"
+#include "../../nclgl/GameTimer.h"
+#include "../../nclgl/window.h"
 //#include "PhysicsNode.h"
 //#include "Entity.h"
 #include "Dragon.h"
 //#include "Raider.h"
 #include "Follower.h"
 #include "Leader.h"
+
 
 using std::vector;
 
@@ -37,15 +40,47 @@ public:
 
 	void UpdatePhysics(float msec);
 
+	float mapX = 864.0f;
+	float mapY = 540.0f;
+	float mapZ = 100.0f;
+
+	vector<vector<BoundingBox> > grid; 
+
+	//void display(const vector<vector<int> >& vy)
+	//{
+	//	for (int i = 0; i < vy.size(); i++)       // loops through each row of vy
+	//	{
+	//		for (int j = 0; j < vy[i].size(); j++) // loops through each element of each row 
+	//			cout << " " << vy[i][j];           // prints the jth element of the ith row
+	//		cout << endl;
+	//	}
+	//}
+
+	const int SCREEN_PIXEL_HEIGHT = 1080;
+	const int SCREEN_PIXEL_WIDTH = 1920;
+	int maxX = 1675 / 27;
+	int maxY = 1000 / 28;
+	float wInc = 2.0f / (float)SCREEN_PIXEL_WIDTH;
+	float hInc = 2.0f / (float)SCREEN_PIXEL_HEIGHT;
+
+
+	void coords(vector<vector<BoundingBox> >& box);
+
 	PhysicsNode map;
 	Dragon dragon;
 	PhysicsNode breath;
 	vector<Raider> raiders;
-	Leader l;
-	Follower f;
-
+	Leader leader;
+	Follower follower;
+	int raiderCount = 1;
 	int getNoInRange() { return noInRange; };
 	
+	GameTimer gT;
+
+	void explicitEueler();
+	void implicitEueler();
+	void semiImplicitEueler();
+	void verletIntegration();
 
 	int noInRange;
 	int numRaiders;

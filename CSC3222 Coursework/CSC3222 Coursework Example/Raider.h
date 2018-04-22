@@ -15,6 +15,10 @@ public:
 	vector<Raider> raidersInRange;
 
 	Entity* get() { return this; };
+
+
+	//PhysicsNode physicsNode;
+	
 private:
 
 };

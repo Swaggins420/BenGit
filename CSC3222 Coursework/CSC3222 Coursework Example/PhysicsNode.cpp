@@ -15,3 +15,10 @@ PhysicsNode::PhysicsNode(Vector3 pos, float o, Vector3 s)
 	orientation = o;
 	scale = s;
 }
+
+void PhysicsNode::setPosition(BoundingBox box) {
+	float x = box.bottomLeft.x - 10;
+	float y = box.bottomLeft.y - 4;
+
+	position = Vector3(x, y, box.topRight.z);
+}

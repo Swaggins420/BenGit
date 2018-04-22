@@ -3,6 +3,8 @@
 Raider::Raider() {
 
 	//physicsNode = PhysicsNode();
+	physicsNode.maxVelocity = 10;
+	physicsNode.maxAcceleration = 10;
 }
 
 
@@ -10,6 +12,7 @@ Raider::~Raider() {}
 
 
 int Raider::countRaidersInRange(vector<Raider> raiders, Dragon dragon) {
+
 	int count = 0;
 	for (int i = 0; i < raiders.size(); ++i)
 	{

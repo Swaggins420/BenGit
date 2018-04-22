@@ -33,6 +33,7 @@ protected:
 	Mesh*	follower;
 	Mesh*	dragon;
 	Mesh*	breathWeapon;
+	//Mesh*	gridSq;
 
 	Frustum frameFrustum;
 

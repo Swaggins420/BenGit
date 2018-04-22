@@ -26,7 +26,7 @@ public:
 	bool inRange(Entity e);
 
 
-
+	float mass;
 	int entitiesInRange;
 	PhysicsNode physicsNode;
 	float aggroRange;

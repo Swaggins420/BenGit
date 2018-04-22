@@ -50,6 +50,7 @@ public:
 
 	//Generates a single white quad, going from -1 to 1 on the x and z axis.
 	static Mesh*	GenerateQuad();
+	//static Mesh*	GenerateQuad(Vector3& bl, Vector3& br, Vector3& tl, Vector3& tr);
 	static Mesh*	GenerateQuadAlt();
 
 	//Sets the Mesh's diffuse map. Takes an OpenGL texture 'name'
